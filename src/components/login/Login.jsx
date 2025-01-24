@@ -1,9 +1,12 @@
 import { useState } from "react";
 import Auth from "./auth.js";
+import { useNavigate } from "react-router-dom";
+import { AppHeader } from "../AppHeader.jsx";
 
 export function Login(){
     let [loginData,setLoginData] = useState({});
     let [errorMessage,setErrorMessage] = useState("");
+    let navigate = useNavigate();
     function handleChangeInput(event){
         setLoginData({
             ...loginData,
@@ -34,6 +37,12 @@ export function Login(){
                 })
 
                 //navigate to the landing page based on the role of the user who has logged in
+                if(data.role=="ADMIN"){
+                    navigate("/book-home");
+                }
+                else if(data.role=="CUSTOMER"){
+                    navigate("/");
+                }
 
             }else{
                 //login failed
@@ -46,6 +55,7 @@ export function Login(){
     
     return (
         <>
+        <AppHeader />
           <div className="row my-2">
             <div className="col-3"></div>
             <div className="col-6">
@@ -92,7 +102,7 @@ export function Login(){
                           type="submit"
                           className="btn btn-light text-success"
                         >
-                          SUBMIT
+                          LOGIN
                         </button>
                       {/* ) : (
                         <button

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ActorItem } from "./ActorItem";
+import { AppHeader } from "../AppHeader";
 
 export function ActorList() {
   let [allActors, setAllActors] = useState([
@@ -37,6 +38,7 @@ export function ActorList() {
   }
   return (
     <>
+    <AppHeader />
       <div className="container m-5">
         <h2>LIST OF ACTORS</h2>
         {/* <ul className="list-group">{mappedAllActors}</ul> */}

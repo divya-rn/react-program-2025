@@ -1,3 +1,5 @@
+import { AppHeader } from "./AppHeader";
+
 export function ArrayDestructure() {
     let allNames = ["John","Jane","Jack","Jill"];
     let name1 = allNames[0];
@@ -10,6 +12,7 @@ export function ArrayDestructure() {
     let [name111,name222,name333,name444,name55,name66]=addAllNames;
     return (  
         <>
+        <AppHeader />
             <h2>Array Destructure Demo</h2>
             <h3>List of Names</h3>
             <p>{name1}</p>

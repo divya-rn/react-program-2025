@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { deleteProperty, getAllProperties } from "./property-data";
+import { AppHeader } from "../AppHeader";
 
 export function PropertyList() {
   let [allProperties, setAllProperties] = useState(getAllProperties());
@@ -41,6 +42,7 @@ export function PropertyList() {
 
   return (
     <>
+    <AppHeader />
       <div className="container">
         <div className="row mt-5">
           <div className="col-10">

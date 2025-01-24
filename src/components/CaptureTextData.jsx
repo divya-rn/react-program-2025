@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AppHeader } from "./AppHeader";
 
 export function CaptureTextData() {
     let [nameData,setNameData] = useState("");
@@ -8,6 +9,7 @@ export function CaptureTextData() {
     }
     return ( 
         <>
+        <AppHeader />
         <div className="container m-5"></div>
             <h2>Capture text box data...</h2>
             <div className="form-control-group">

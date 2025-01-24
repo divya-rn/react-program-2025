@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FruitItem } from "./FruitItem";
+import { AppHeader } from "../AppHeader";
 export function FruitList() {
   let [allFruits, setAllFruits] = useState([
     {
@@ -32,6 +33,7 @@ export function FruitList() {
   }
   return (
     <>
+    <AppHeader />
       <div className="container m-5">
         <h2>LIST OF FRUITS</h2>
         {allFruits.length == 0 ? (

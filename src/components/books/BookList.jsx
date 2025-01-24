@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { getAllBooks, deleteBook } from "./book-data";
+import { AppHeader } from "../AppHeader";
 
 export function BookList() {
   let navigate = useNavigate();
@@ -57,6 +58,7 @@ export function BookList() {
   }
   return (
     <>
+    <AppHeader />
       <div className="container m-3">
         <h2>LIST OF BOOKS</h2>
         {isBooksEmpty ? (

@@ -1,8 +1,11 @@
+import { AppHeader } from "./AppHeader";
+
 function ListCity() {
     let allCities=["Chennai","Pune","Mumbai"];
     let mappedAllCities=allCities.map((eachCity)=><li className="list-group-item">{eachCity}</li>);
     return ( 
         <>
+        <AppHeader />
             <h3>List of Cities</h3>
             <div>
             {allCities}

@@ -24,11 +24,17 @@ function retrieveUser(){
     return sessionStorage.getItem("userinfo");
 }
 
+function getRole(){
+    let user = JSON.parse(retrieveUser());
+    return user.role;
+}
+
 export default {isLoggedIn: isLoggedIn,
     storeToken: storeToken,
     retrieveToken: retrieveToken,
     deleteToken: deleteToken,
     storeUser: storeUser,
     deleteUser: deleteUser,
-    retrieveUser: retrieveUser
+    retrieveUser: retrieveUser,
+    getRole: getRole
 };

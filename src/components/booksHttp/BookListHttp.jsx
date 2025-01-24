@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppHeader } from "../AppHeader";
 
 export function BookListHttp() {
   let navigate = useNavigate();
@@ -65,6 +66,7 @@ export function BookListHttp() {
   }
   return (
     <>
+    <AppHeader />
       <div className="container m-3">
         <h2>LIST OF BOOKS</h2>
         {isBooksEmpty ? (

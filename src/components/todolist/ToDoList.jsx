@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ToDoItem } from "./ToDoItem";
+import { AppHeader } from "../AppHeader";
 
 export function ToDoList() {
     const [newTodo, setNewTodo] = useState("");  
@@ -41,6 +42,7 @@ export function ToDoList() {
   
     return (
       <>
+      <AppHeader />
         <div>
           <input 
             type="text" 

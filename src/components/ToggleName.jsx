@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AppHeader } from "./AppHeader";
 
 let toggle=true;
 export function ToggleName() {
@@ -18,6 +19,7 @@ export function ToggleName() {
   return (
     //<div>
     <>
+    <AppHeader />
       <h3>Toggle Name Component</h3>
       <button type="button" onClick={displayName}>Click</button>
       <h5>{dName}</h5>

@@ -1,3 +1,5 @@
+import { AppHeader } from "./AppHeader";
+
 export function ObjectDestructure() {
     let student = {
         studentName : "John",
@@ -19,6 +21,7 @@ export function ObjectDestructure() {
     };
     return ( 
         <>
+        <AppHeader />
             <h2>Object Destructuring Demo</h2>
             <h3>Student Details</h3>
             <p>Student Name : {sName}</p>

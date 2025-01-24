@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AppHeader } from "./AppHeader";
 
 export function FetchDemo() {
     let [userData,setUserData] = useState([]);
@@ -23,6 +24,7 @@ export function FetchDemo() {
   })
   return (
     <>
+    <AppHeader />
       <div className="container m-3">
         <h3>LIST OF USERS</h3>
       </div>
